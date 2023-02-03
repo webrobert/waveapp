@@ -123,7 +123,21 @@ currency {
 timezone 
 address {
     $address
-} 
+}
+accounts(page:1 pageSize:100) {
+    edges {
+        node {
+            id
+            name
+            subtype {
+                name
+                value
+            }
+            normalBalanceType
+            isArchived
+        }
+    }
+}
 phone 
 fax 
 mobile 
